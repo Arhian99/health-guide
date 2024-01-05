@@ -1,0 +1,472 @@
+
+// this file is used to customize bootstrap's included scss
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+// font variables
+$nunito: 'Nunito', serif;
+
+$headings-font-family:  $nunito;
+$headings-font-weight:   800;
+$font-family-sans-serif: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+$font-family-monospace:   'Nunito', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+
+// theme-color-variables
+$primary:       #0138a3;
+$secondary:     #fdf8f2;
+$tertiary:      #7f98ca;
+$light:         #d5d9e5;
+$gray-500: #d5d9e5 ;
+
+// modified variables
+$font-weight-semibold: 700;
+// $font-size-base: 1rem; // Assumes the browser default, typically `16px`
+
+$font-weight-bold: 800;
+$h5-font-size: $font-size-base * 1.15 ;
+$h1-font-size: $font-size-base * 2.65 ;
+
+$h0-font-size: $font-size-base * 3.25 ;
+$h10-font-size: $font-size-base * 3.75;
+$h20-font-size: $font-size-base * 4;
+$h30-font-size: $font-size-base * 4.25;
+
+$btn-border-radius: 1.2rem;
+$body-bg: $secondary;
+$body-color: $primary;
+$input-placeholder-color:  $primary;
+$form-check-input-border: 3px solid $primary;
+$box-shadow-lg: 0rem 0.7rem 1rem rgba($primary, 0.6);
+$box-shadow-sm: 0rem 0.5rem 0.8rem rgba($primary, 0.5);
+
+
+// gray-colors-map
+$grays: map-merge(
+  $grays, 
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  )
+) ;
+
+
+// theme-colors-map
+$theme-colors: map-merge(
+    $theme-colors,
+    (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "tertiary":   $tertiary,
+        "light":      $light,
+    )
+);
+
+//  font-sizes-map
+$font-sizes: map-merge(
+    $font-sizes,
+    (
+    30: $h30-font-size,  
+    20: $h20-font-size,
+    10: $h10-font-size,
+    0: $h0-font-size, 
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size
+    )
+);
+
+// spacer-variables-maps
+$spacers: map-merge(
+    $spacers,
+    (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 4,
+        7: $spacer * 5,
+        8: $spacer * 6
+      
+    )
+) ;
+
+// border-widths-maps
+$border-widths: map-merge(
+  $border-widths,
+  (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    6: 6px,
+    7: 7px,
+    8: 8px
+  )
+);
+
+$gutters: map-merge($gutters, $spacers);
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) ;
+
+// adding our custom theme colors to other maps that use it
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+// merging the utilities map with our custom utilities
+$utilities: map-merge(
+    $utilities,
+    (
+      "width": (
+        responsive: true,
+        property: width,
+        class: w,
+        values: (
+          10: 10%,
+          20: 20%,
+          25: 25%,
+          30: 30%,
+          40: 40%,
+          50: 50%,
+          60: 60%,
+          70: 70%,
+          75: 75%,
+          80: 80%,
+          90: 90%,
+          100: 100%,
+          auto: auto
+  )
+      ),
+        "max-width": (
+            responsive: true,
+            property: max-width,
+            class: mw,
+            values: (
+                10: 10%,
+                20: 20%,
+                25: 25%,
+                30: 30%,
+                40: 40%,
+                50: 50%,
+                60: 60%,
+                70: 70%,
+                75: 75%,
+                80: 80%,
+                90: 90%,
+                100: 100%,
+                750px: 750px,
+                1000px: 1000px,
+                1200px: 1200px,
+                1500px: 1500px,
+                auto: auto
+            )
+        ),
+        "viewport-width": (
+            responsive: true,
+            property: width,
+            class: vw,
+            values: (
+                10: 10vw,
+                20: 20vw,
+                25: 25vw,
+                30: 30vw,
+                40: 40vw,
+                50: 50vw,
+                60: 60vw,
+                70: 70vw,
+                75: 75vw,
+                80: 80vw,
+                90: 90vw,
+                100: 100vw,
+            )
+        ),
+        "min-viewport-width": (
+          responsive: true,
+          property: min-width,
+          class: min-vw,
+          values: (
+            10: 10vw,
+            20: 20vw,
+            25: 25vw,
+            30: 30vw,
+            40: 40vw,
+            50: 50vw,
+            60: 60vw,
+            70: 70vw,
+            75: 75vw,
+            80: 80vw,
+            90: 90vw,
+            100: 100vw,
+          )
+        ),
+        "height": (
+          responsive: true,
+          property: height,
+          class: h,
+          values: (
+            10: 10%,
+            20: 20%,
+            25: 25%,
+            30: 30%,
+            40: 40%,
+            50: 50%,
+            60: 60%,
+            70: 70%,
+            75: 75%,
+            80: 80%,
+            90: 90%,
+            100: 100%,
+            auto: auto
+          )
+        ),
+        "max-height": (
+          responsive: true,
+          property: max-height,
+          class: mh,
+          values: (
+            10: 10%,
+            20: 20%,
+            25: 25%,
+            30: 30%,
+            40: 40%,
+            50: 50%,
+            60: 60%,
+            70: 70%,
+            75: 75%,
+            80: 80%,
+            90: 90%,
+            100: 100%,
+            auto: auto  
+          )
+        ),
+        "viewport-height": (
+          responsive: true,
+          property: height,
+          class: vh,
+          values: (
+            10: 10vh,
+            20: 20vh,
+            25: 25vh,
+            30: 30vh,
+            40: 40vh,
+            50: 50vh,
+            60: 60vh,
+            70: 70vh,
+            75: 75vh,
+            80: 80vh,
+            90: 90vh,
+            100: 100vh,
+          )
+        ),
+        "min-viewport-height": (
+          responsive: true,
+          property: min-height,
+          class: min-vh,
+          values: (
+            10: 10vh,
+            20: 20vh,
+            25: 25vh,
+            30: 30vh,
+            40: 40vh,
+            50: 50vh,
+            60: 60vh,
+            70: 70vh,
+            75: 75vh,
+            80: 80vh,
+            90: 90vh,
+            100: 100vh,
+          )
+        ),    
+        "font-weight": (
+            property: font-weight,
+            class: fw,
+            values: (
+              lighter: $font-weight-lighter,
+              light: $font-weight-light,
+              normal: $font-weight-normal,
+              medium: $font-weight-medium,
+              semibold: $font-weight-semibold,
+              bold: $font-weight-bold,
+              bolder: $font-weight-bolder
+            )
+        ),
+        "font-size": (
+            responsive: true,
+            rfs: true,
+            property: font-size,
+            class: fs,
+            values: $font-sizes
+        ),
+        "margin": (
+            responsive: true,
+            property: margin,
+            class: m,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          "margin-x": (
+            responsive: true,
+            property: margin-right margin-left,
+            class: mx,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          "margin-y": (
+            responsive: true,
+            property: margin-top margin-bottom,
+            class: my,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          "margin-top": (
+            responsive: true,
+            property: margin-top,
+            class: mt,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          "margin-end": (
+            responsive: true,
+            property: margin-right,
+            class: me,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          "margin-bottom": (
+            responsive: true,
+            property: margin-bottom,
+            class: mb,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          "margin-start": (
+            responsive: true,
+            property: margin-left,
+            class: ms,
+            values: map-merge($spacers, (auto: auto))
+        ),
+          // Negative margin utilities
+          "negative-margin": (
+            responsive: true,
+            property: margin,
+            class: m,
+            values: $negative-spacers
+        ),
+          "negative-margin-x": (
+            responsive: true,
+            property: margin-right margin-left,
+            class: mx,
+            values: $negative-spacers
+        ),
+          "negative-margin-y": (
+            responsive: true,
+            property: margin-top margin-bottom,
+            class: my,
+            values: $negative-spacers
+        ),
+          "negative-margin-top": (
+            responsive: true,
+            property: margin-top,
+            class: mt,
+            values: $negative-spacers
+        ),
+          "negative-margin-end": (
+            responsive: true,
+            property: margin-right,
+            class: me,
+            values: $negative-spacers
+        ),
+          "negative-margin-bottom": (
+            responsive: true,
+            property: margin-bottom,
+            class: mb,
+            values: $negative-spacers
+        ),
+          "negative-margin-start": (
+            responsive: true,
+            property: margin-left,
+            class: ms,
+            values: $negative-spacers
+        ),
+          // Padding utilities
+          "padding": (
+            responsive: true,
+            property: padding,
+            class: p,
+            values: $spacers
+        ),
+          "padding-x": (
+            responsive: true,
+            property: padding-right padding-left,
+            class: px,
+            values: $spacers
+        ),
+          "padding-y": (
+            responsive: true,
+            property: padding-top padding-bottom,
+            class: py,
+            values: $spacers
+        ),
+          "padding-top": (
+            responsive: true,
+            property: padding-top,
+            class: pt,
+            values: $spacers
+        ),
+          "padding-end": (
+            responsive: true,
+            property: padding-right,
+            class: pe,
+            values: $spacers
+        ),
+          "padding-bottom": (
+            responsive: true,
+            property: padding-bottom,
+            class: pb,
+            values: $spacers
+        ),
+          "padding-start": (
+            responsive: true,
+            property: padding-left,
+            class: ps,
+            values: $spacers
+        ),
+          // Gap utility
+          "gap": (
+            responsive: true,
+            property: gap,
+            class: gap,
+            values: $spacers
+        ),
+          "row-gap": (
+            responsive: true,
+            property: row-gap,
+            class: row-gap,
+            values: $spacers
+        ),
+          "column-gap": (
+            responsive: true,
+            property: column-gap,
+            class: column-gap,
+            values: $spacers
+        ),
+        "font-family": (
+            property: font-family,
+            class: font,
+            values: (monospace: var(--#{$prefix}font-monospace))
+        ),    
+    )
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss'

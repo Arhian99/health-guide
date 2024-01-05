@@ -1,0 +1,10 @@
+
+input::placeholder{
+    font-size: 1.2rem;
+}
+
+input#emailCopy{
+    padding: 0.8rem;
+    margin-right: 10px;
+}
+
