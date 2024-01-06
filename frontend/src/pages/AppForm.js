@@ -42,7 +42,7 @@ function AppForm(props) {
         }), 
         onSubmit: async (values) => {
             console.log(values);
-
+            navigate("/review");
         }
     })
 

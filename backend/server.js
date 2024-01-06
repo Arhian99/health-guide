@@ -17,6 +17,16 @@ app.get('/api', (req, res) => {
     res.json({message: "Hello from the server!"});
 })
 
+app.post('/api/submitForm', (req, res) => {
+    // process form data: 
+    // - save patient email, phone number, and age to the database
+    // - if sendEmail == true, call sendEmail(formData) function to send user an email with form data
+    //          inside sendEmail() function take the form data and turn it into HTML email and send THAT (call function named getFormResponseTemplate())
+    res.status(200).send("Form submitted successfully.")
+})
+
+
+
 // handles ALL OTHER GET requests that were not handled above by serving our REACT application
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
