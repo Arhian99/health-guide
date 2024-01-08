@@ -8,6 +8,9 @@ import AppProgressBar from '../components/AppProgressBar';
 import { TiPlus } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
 import TextBubble from '../components/TextBubble';
+import postData from '../api/utils';
+import axios from '../api/axios';
+import FormDTO from '../api/FormDTO';
 
 function AppForm(props) {
     const [activeFormPage, setActiveFormPage] = useState(1);
@@ -25,7 +28,7 @@ function AppForm(props) {
             goal: '',           // what do you hope to accomplish during this visit?
             isGoal: '',         // do you know why you are here today?
             diagnosis: '',      // What do you think your diagnosis is, if anything?
-            curiosity: '',      // what are you confused by or what do you want to know more about?
+            curiosity: [],      // what are you confused by or what do you want to know more about?
             mainConcern: '',    // what is one thing you need to talk about before you leave today?
             emailCopy: false,   // I would like a copy of my responses sent to my email inbox.
         },
@@ -41,16 +44,27 @@ function AppForm(props) {
             emailCopy: Yup.boolean()
         }), 
         onSubmit: async (values) => {
-            console.log(values);
-            navigate("/review");
+            try{
+                const response = await axios.post(
+                    "/api/submitForm",
+                    values
+                );
+                console.log(response);
+
+            } catch(error){
+                console.log(error);
+                setErrorMsg(error?.data?.message)
+            }
         }
     })
 
     function handleNextBtn() {
         if(activeFormPage < 4) {
-            if(activeFormPage === 3) {
-                formik.values.curiosity = curiosityAnswersArray.current;
-            }
+            // if(activeFormPage === 3) {
+            //     if(formik.values.curiosity!=='' && formik.values.curiosity!==curiosityAnswersArray.current[curiosityAnswers]) {
+            //         curiosityAnswersArray.current.push(formik.values.curiosity)
+            //     }
+            // }
             setActiveFormPage(activeFormPage + 1);
         }
     }
@@ -191,18 +205,17 @@ function AppForm(props) {
                             as="textarea"
                             rows={5}
                         />
-                        <Button 
+                        {/* <Button 
                             className='w-100 mt-4 d-flex align-items-center justify-content-center fw-semibold py-3' 
                             style={curiosityAnswers > 0 ? {opacity: 1} : {opacity: 0.60}}
                             onClick={() => {
                                 curiosityAnswersArray.current.push(formik.values.curiosity);
                                 setCuriosityAnswers(curiosityAnswers+1);
                                 formik.values.curiosity="";
-
                             }}
                             >
                                 {curiosityAnswers > 0 ? <span className='px-1 m-1 border border-2 border-white rounded-circle'>{curiosityAnswers}</span> : <TiPlus/>}<span className='m-0 p-0 mx-1'>Add another answer</span>
-                        </Button>
+                        </Button> */}
                         <Form.Text className='text-danger'>{formik.touched.curiosity && formik.errors.curiosity ? formik.errors.curiosity : null}</Form.Text>
                     </Form.Group>
 
@@ -230,9 +243,10 @@ function AppForm(props) {
                         <h1 className='fs-10 fw-semibold mb-4'>Summary</h1>
 
                         <TextBubble text={`I believe my diagnosis is ${formik.values.diagnosis}`} className="my-4"/>
-                        <TextBubble text={`I want to know more about `.concat(formik.values.curiosity.map(value => {
+                        {/* <TextBubble text={`I want to know more about `.concat(curiosityAnswersArray.current.map(value => {
                             return " "+value;
-                        } ))} className="my-4"/>
+                        } ))} className="my-4"/> */}
+                        <TextBubble text={`I want to know more about ${formik.values.curiosity}`} className="my-4"/>
                         <TextBubble text={`The one thing I must address with my doctor before I leave is ${formik.values.mainConcern}`} className="my-4"/>
 
                         <Container fluid className="m-0 p-0 d-flex align-items-start align-items-sm-center mb-5">
@@ -251,8 +265,13 @@ function AppForm(props) {
                         </Container>
 
                         <Form.Text className='mb-4'>
-                            {errorMsg !== null ? <Alert>{errorMsg}</Alert> : null}
+                            {errorMsg !== null ? <Alert variant="danger" >{errorMsg}</Alert> : null}
                         </Form.Text>
+
+                        <Form.Text className='text-danger'>{formik.touched.age && formik.errors.age ? (formik.errors.age+" ") : null}</Form.Text>
+                        <Form.Text className='text-danger'>{formik.touched.email && formik.errors.email ? (formik.errors.email+" ") : null}</Form.Text>
+                        <Form.Text className='text-danger'>{formik.touched.phone && formik.errors.phone ? (formik.errors.phone+" ") : null}</Form.Text>
+
                     </Form.Group>
                     
                 </Container>
@@ -265,16 +284,23 @@ function AppForm(props) {
             <Form onSubmit={formik.handleSubmit} className='m-0 p-0 w-100'>
                 {getFormPage(activeFormPage)}
 
-                {activeFormPage < 4 ? (
-                    <Container fluid className='m-0 p-0 d-flex justify-content-between my-5'>
+                    {/* <Container fluid className='m-0 p-0 d-flex justify-content-between my-5'>
                         <BackButton text="Back" onClick={handleBackBtn}/>
-                        <NextButton text="Next" onClick={handleNextBtn}/>
-                    </Container>
-                ) : (
-                    <Container fluid className='m-0 p-0 w-100 d-flex justify-content-end'>
-                        <Button type='submit' className='p-0 m-0 shadow-sm fs-3 fw-semibold px-5 py-2'>Finish!</Button>
-                    </Container>
-                )}
+                        {activeFormPage < 4 ? (<NextButton text="Next" onClick={handleNextBtn}/>) : (<Button className='p-0 m-0 shadow-sm fs-3 fw-semibold px-5 py-2' type='submit'>Finish!</Button>)}
+                    </Container> */}
+ 
+                {
+                    activeFormPage < 4 ? (
+                        <Container fluid className='m-0 p-0 d-flex justify-content-between my-5'>
+                            <BackButton text="Back" onClick={handleBackBtn}/>
+                            <NextButton text="Next" onClick={handleNextBtn}/>
+                        </Container>
+                    ) : (
+                        <Container fluid className='m-0 p-0 w-100 d-flex justify-content-end'>
+                            <Button className='p-0 m-0 shadow-sm fs-3 fw-semibold px-5 py-2' type='submit'>Finish!</Button>
+                        </Container>
+                    )
+                }
             </Form>
         </Container>
     )

@@ -1,10 +1,6 @@
 import { Container } from 'react-bootstrap';
-import MainButton from './components/MainButton';
-import NextButton from './components/NextButton';
-import BackButton from './components/BackButton';
 import Home from './pages/Home';
 import AppForm from './pages/AppForm';
-import AppProgressBar from './components/AppProgressBar';
 import { Routes, Route } from 'react-router-dom';
 import Test from './pages/Test';
 import Review from './pages/Review';
@@ -16,11 +12,7 @@ function App() {
         <Route path="form" element={<AppForm />} />
         <Route path="review" element={<Review />} />
       </Routes>
-      {/* <Home /> */}
-      {/* <AppForm /> */}
-      {/* <AppProgressBar completed="10"/> */}
     </Container>
-    // <Test />
   );
 };
 
