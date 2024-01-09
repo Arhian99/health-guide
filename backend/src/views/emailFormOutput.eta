@@ -1,0 +1,316 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title></title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+
+  </style>
+  <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+  <!--[if lte mso 11]>
+    <style type="text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap);
+    @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap);
+
+  </style>
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+
+  </style>
+  <style type="text/css">
+  </style>
+  <style type="text/css">
+  </style>
+</head>
+
+<body style="word-spacing:normal;">
+  <div style="">
+    <!-- Header section -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:850px;" width="850" bgcolor="#fdf8f2" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#fdf8f2;background-color:#fdf8f2;margin:0px auto;max-width:850px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fdf8f2;background-color:#fdf8f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:850px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#fdf8f2;vertical-align:top;" width="100%">
+                  <tbody>
+                    <!-- Company logo text -->
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:10px;word-break:break-word;">
+                        <div style="font-family:Nunito, Roboto, sans-serif;font-size:40px;font-weight:800;line-height:36px;text-align:center;text-transform:capitalize;color:#0138a3;">Health Guide</div>
+                      </td>
+                    </tr>
+                    <!-- Company logo image 
+        <mj-image
+          width="100px"
+          border-radius="50%"
+          src="../assets/logo192.png"
+        /> --><!-- Divider -->
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:0px 20px 0px 20px;word-break:break-word;">
+                        <p style="border-top:solid 4px #0138a3;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 4px #0138a3;font-size:1px;margin:0px auto;width:810px;" role="presentation" width="810px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+    <!-- Content section -->
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-section-outlook" role="presentation" style="width:850px;" width="850" bgcolor="#fdf8f2" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div class="body-section" style="background:#fdf8f2;background-color:#fdf8f2;margin:0px auto;max-width:850px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fdf8f2;background-color:#fdf8f2;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0;padding-top:15px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="850px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:850px;" width="850" bgcolor="#fdf8f2" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="background:#fdf8f2;background-color:#fdf8f2;margin:0px auto;max-width:850px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fdf8f2;background-color:#fdf8f2;width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:0px 20px 30px 20px;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:810px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="vertical-align:top;padding-right:35px;padding-left:35px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                                    <tbody>
+                                      <!-- Introductory text -->
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:0px 0px 0px 0px;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:20px;font-weight:bold;line-height:20px;text-align:left;color:#0138a3;">Health Guide responses for your visit on <%= it.currentDate %></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:20px 0;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:16px;font-weight:500;line-height:26px;text-align:left;color:#4c5862;"><%= it.isGoalStatement %></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:10px 0;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:16px;font-weight:500;line-height:26px;text-align:left;color:#4c5862;">Your goal for the visit is: <%= it.goal %></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:10px 0;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:16px;font-weight:500;line-height:26px;text-align:left;color:#4c5862;">You believe your diagnosis is: <%= it.diagnosis %></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:10px 0;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:16px;font-weight:500;line-height:26px;text-align:left;color:#4c5862;">You are curious/concerned about: <%= it.curiosity %></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="font-size:0px;padding:10px 0;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:16px;font-weight:500;line-height:26px;text-align:left;color:#4c5862;">Your main concern for this visit is: <%= it.mainConcern %></div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+              <!-- Footer section -->
+              <!--[if mso | IE]><tr><td class="" width="850px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:850px;" width="850" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:850px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:850px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="background-color:#0138a3;vertical-align:top;padding:15px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                                    <tbody>
+                                      <!-- Social icons -->
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                          <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                                          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="padding:4px;vertical-align:middle;">
+                                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#3b5998;border-radius:5px;width:30px;">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                          <a href="https://www.facebook.com/sharer/sharer.php?u=#" target="_blank">
+                                                            <img height="30" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/facebook.png" style="border-radius:5px;display:block;" width="30" />
+                                                          </a>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--[if mso | IE]></td><td><![endif]-->
+                                          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="padding:4px;vertical-align:middle;">
+                                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#dc4e41;border-radius:5px;width:30px;">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                          <a href="https://plus.google.com/share?url=#" target="_blank">
+                                                            <img height="30" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/google-plus.png" style="border-radius:5px;display:block;" width="30" />
+                                                          </a>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--[if mso | IE]></td><td><![endif]-->
+                                          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="padding:4px;vertical-align:middle;">
+                                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#0077b5;border-radius:5px;width:30px;">
+                                                    <tbody>
+                                                      <tr>
+                                                        <td style="font-size:0;height:30px;vertical-align:middle;width:30px;">
+                                                          <a href="https://www.linkedin.com/shareArticle?mini=true&url=#&title=&summary=&source=" target="_blank">
+                                                            <img height="30" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/linkedin.png" style="border-radius:5px;display:block;" width="30" />
+                                                          </a>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--[if mso | IE]></td></tr></table><![endif]-->
+                                        </td>
+                                      </tr>
+                                      <!-- Contact information -->
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:11px;line-height:16px;text-align:center;color:#fdf8f2;">If you have any questions regarding this email or any related queries, you can contact us at <a href="teachback.ai@gmail.com">teachback.ai@gmail.com</a></div>
+                                        </td>
+                                      </tr>
+                                      <!-- Copyright -->
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:0.5px;word-break:break-word;">
+                                          <div style="font-family:Nunito, Roboto, sans-serif;font-size:11px;line-height:16px;text-align:center;color:#fdf8f2;">&copy; Health Guide, All Rights Reserved.</div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </div>
+</body>
+
+</html>

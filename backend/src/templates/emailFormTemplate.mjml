@@ -1,0 +1,150 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Roboto"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap"
+    />
+    <mj-font
+      name="Nunito"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap"
+    />
+    <mj-attributes>
+      <mj-text
+        font-family="Nunito, Roboto, sans-serif"
+        font-size="16px"
+        line-height="26px"
+        color="#4c5862"
+        padding-bottom="0.5px"
+      />
+      <mj-button
+        background-color="#0138a3"
+        font-size="22px"
+        color="#fdf8f2"
+        font-weight="700"
+        border-radius="20px"
+        font-family="Nunito, Roboto, sans-serif"
+        text-transform="capitalize"
+        height="25px"
+        width="150px"
+        padding-top="30px"
+        padding-bottom="30px"
+      />
+      <mj-class
+        name="head-text"
+        font-size="20px"
+        color="#0138a3"
+        line-height="20px"
+        font-weight="bold"
+      />
+      <mj-class name="body-text" font-size="16px" font-weight="500" />
+      <mj-class name="social-bg" background-color="#000" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body width="850px" >
+    <!-- Header section -->
+    <mj-section background-color="#fdf8f2">
+      <mj-column background-color="#fdf8f2">
+        <!-- Company logo text -->
+        <mj-text
+          font-size="40px"
+          color="#0138a3"
+          font-weight="800"
+          align="center"
+          text-transform="capitalize"
+          padding-bottom="10px"
+          line-height="36px"
+          font-family="Nunito, Roboto, sans-serif"
+          >Health Guide</mj-text
+        >
+
+        <!-- Company logo image 
+        <mj-image
+          width="100px"
+          border-radius="50%"
+          src="../assets/logo192.png"
+        />
+        -->
+
+        <!-- Divider -->
+        <mj-divider
+          border-color="#0138a3"
+          padding="0px 20px 0px 20px"
+        ></mj-divider>
+      </mj-column>
+    </mj-section>
+
+    <!-- Content section -->
+    <mj-wrapper padding-top="15px" padding="0" background-color="#fdf8f2" css-class="body-section">
+      <mj-section background-color="#fdf8f2" padding="0px 20px 30px 20px">
+        <mj-column width="100%" padding-right="35px" padding-left="35px">
+          <!-- Introductory text -->
+          <mj-text mj-class="head-text" padding="0px 0px 0px 0px">
+            Health Guide responses for your visit on <%= it.currentDate %>
+          </mj-text>
+
+          <mj-text padding="20px 0" mj-class="body-text">
+            <%= it.isGoalStatement %>
+          </mj-text>
+
+          <mj-text padding="10px 0" mj-class="body-text">
+            Your goal for the visit is: <%= it.goal %>
+          </mj-text>
+
+          <mj-text padding="10px 0" mj-class="body-text">
+            You believe your diagnosis is: <%= it.diagnosis %>
+          </mj-text>
+
+          <mj-text padding="10px 0" mj-class="body-text">
+            You are curious/concerned about: <%= it.curiosity %>
+          </mj-text>
+
+          <mj-text padding="10px 0" mj-class="body-text">
+            Your main concern for this visit is: <%= it.mainConcern %>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Footer section -->
+      <mj-section>
+        <mj-column width="100%" padding="15px" background-color="#0138a3">
+          <!-- Social icons -->
+          <mj-social
+            font-size="15px"
+            icon-size="30px"
+            border-radius="5px"
+            mode="horizontal"
+            padding="0"
+            align="center"
+          >
+            <mj-social-element name="facebook" href="#"></mj-social-element>
+            <mj-social-element name="google" href="#"></mj-social-element>
+            <mj-social-element name="linkedin" href="#"></mj-social-element>
+          </mj-social>
+
+          <!-- Contact information -->
+          <mj-text
+            color="#fdf8f2"
+            font-size="11px"
+            align="center"
+            line-height="16px"
+          >
+            If you have any questions regarding this email or any related
+            queries, you can contact us at
+            <a href="teachback.ai@gmail.com">teachback.ai@gmail.com</a>
+          </mj-text>
+
+          <!-- Copyright -->
+          <mj-text
+            color="#fdf8f2"
+            font-size="11px"
+            align="center"
+            line-height="16px"
+          >
+            &copy; Health Guide, All Rights Reserved.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

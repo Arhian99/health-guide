@@ -1,10 +1,14 @@
 // backend server running on localhost:5000, so all requests to localhost:5000 will be handled by this server
-import sendMail from './utils/mailer.js';
-import processFormData from './utils/utils.js';
+import sendMail from './src/utils/mailer.js';
+import processFormData from './src/utils/utils.js';
 import path from 'path';
 import express from 'express';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
+// import * as Eta from 'eta'
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // all requests coming to here, node will service and serve the files for our built react app
 
@@ -20,12 +24,18 @@ app.use(
 );
 app.use(express.json());
 app.use(cors());
+// app.engine("eta", () => Eta.renderFile);
+// app.set("view engine", "eta");
+// app.set("views", "./src/views");
+
 
 // TEST: handles GET requests to /api
 // app.get('/api', (req, res) => {
-//     const message = "Testing email feature by sending an email from a node server..."
+//     const message = "Testing email feature by sending an email from a node server...";
+//     console.log(process.env.EMAIL_USER);
+
 //     const options = {
-//         from: "",         // teachback.ai@gmail.com
+//         from: process.env.EMAIL_USER,         // teachback.ai@gmail.com
 //         to: "",
 //         subject: "Nodemailer Test",
 //         text: message,
@@ -39,7 +49,11 @@ app.use(cors());
 
 app.post('/api/submitForm', (req, resp) => {
     const formData = req.body;
-    console.log("Form data received: ", formData)
+
+    if(formData !== undefined || JSON.stringify(formData) !== '{}') {
+        console.log("Form data received!");
+    }
+    
     processFormData(formData);
 
     resp.status(200).send("Form submitted successfully!");
@@ -59,3 +73,7 @@ app.get("*", (req, res) => {
 });
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
+
+
+//     "start": "node server.js",
+//     "build": "cd ../frontend && npm install && npm run build"

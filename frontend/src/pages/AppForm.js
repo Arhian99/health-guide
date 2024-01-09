@@ -50,7 +50,8 @@ function AppForm(props) {
                     values
                 );
                 console.log(response);
-
+                navigate("/review");
+                
             } catch(error){
                 console.log(error);
                 setErrorMsg(error?.data?.message)
@@ -301,6 +302,7 @@ function AppForm(props) {
                         </Container>
                     )
                 }
+
             </Form>
         </Container>
     )
