@@ -4,6 +4,7 @@ import AppForm from './pages/AppForm';
 import { Routes, Route } from 'react-router-dom';
 import Test from './pages/Test';
 import Review from './pages/Review';
+
 function App() {
   return(
     <Container className='min-vw-100 min-vh-100 m-0 p-0 bg-secondary d-flex flex-column align-items-center justify-content-start'>
@@ -20,7 +21,6 @@ export default App;
 
 
 /*
-* - Make /sendEmail endpoint which sends email with summary of responses in the form AND saves the user email address, age, and phone number (backend)
   - Connect database to backend (backend)
   - Save user names and emails to database (backend)
   - Make /submitDocReview endpoint which submits doctor review to database (backend)

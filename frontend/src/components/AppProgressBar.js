@@ -52,4 +52,4 @@ function AppProgressBar(props) {
     )
 }
 
-export default AppProgressBar
+export default AppProgressBar;

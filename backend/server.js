@@ -1,17 +1,17 @@
-// backend server running on localhost:5000, so all requests to localhost:5000 will be handled by this server
-import sendMail from './src/utils/mailer.js';
 import processFormData from './src/utils/utils.js';
 import path from 'path';
 import express from 'express';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
+import mongoose from 'mongoose';
+import { processReviewData } from './src/utils/utils.js';
 // import * as Eta from 'eta'
 import dotenv from 'dotenv';
 
 dotenv.config();
 
 // all requests coming to here, node will service and serve the files for our built react app
-
+const mongoURI = process.env.MONGO_URI;
 const PORT = process.env.PORT || 5000;
 const app = express();
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
@@ -24,6 +24,19 @@ app.use(
 );
 app.use(express.json());
 app.use(cors());
+
+async function connect() {
+    try {
+        await mongoose.connect(mongoURI, {dbName: "HealthGuide"});
+        console.log("Connected to MongoDB...");
+    }catch(error){
+        console.log(error.message);
+    }
+}
+
+connect();
+
+
 // app.engine("eta", () => Eta.renderFile);
 // app.set("view engine", "eta");
 // app.set("views", "./src/views");
@@ -53,7 +66,7 @@ app.post('/api/submitForm', (req, resp) => {
     if(formData !== undefined || JSON.stringify(formData) !== '{}') {
         console.log("Form data received!");
     }
-    
+
     processFormData(formData);
 
     resp.status(200).send("Form submitted successfully!");
@@ -61,7 +74,10 @@ app.post('/api/submitForm', (req, resp) => {
 
 app.post('/api/submitReview', (req, resp) => {
     const reviewData = req.body;
-    console.log("Review data received: ", reviewData);
+    if(reviewData !== undefined || JSON.stringify(reviewData) !== '{}') {
+        console.log("Review data received!");
+    }
+    
     processReviewData(reviewData);
 
     resp.status(200).send("Review submitted successfully!");

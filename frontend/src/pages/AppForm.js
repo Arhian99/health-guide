@@ -8,14 +8,13 @@ import AppProgressBar from '../components/AppProgressBar';
 import { TiPlus } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
 import TextBubble from '../components/TextBubble';
-import postData from '../api/utils';
 import axios from '../api/axios';
 import FormDTO from '../api/FormDTO';
 
 function AppForm(props) {
     const [activeFormPage, setActiveFormPage] = useState(1);
-    const [curiosityAnswers, setCuriosityAnswers] = useState(0);
-    const curiosityAnswersArray = useRef([]);
+    // const [curiosityAnswers, setCuriosityAnswers] = useState(0);
+    // const curiosityAnswersArray = useRef([]);
 
     const navigate = useNavigate();
     const [errorMsg, setErrorMsg] = useState(null);    
@@ -28,7 +27,7 @@ function AppForm(props) {
             goal: '',           // what do you hope to accomplish during this visit?
             isGoal: '',         // do you know why you are here today?
             diagnosis: '',      // What do you think your diagnosis is, if anything?
-            curiosity: [],      // what are you confused by or what do you want to know more about?
+            curiosity: '',      // what are you confused by or what do you want to know more about?
             mainConcern: '',    // what is one thing you need to talk about before you leave today?
             emailCopy: false,   // I would like a copy of my responses sent to my email inbox.
         },
@@ -39,7 +38,7 @@ function AppForm(props) {
             goal: Yup.string(),
             isGoal: Yup.string().oneOf(["yes", "no", "unsure"], "Please enter a valid value."),
             diagnosis: Yup.string(),
-            // curiosity: Yup.string(),
+            curiosity: Yup.string(),
             mainConcern: Yup.string(),
             emailCopy: Yup.boolean()
         }), 
@@ -49,7 +48,6 @@ function AppForm(props) {
                     "/api/submitForm",
                     values
                 );
-                console.log(response);
                 navigate("/review");
                 
             } catch(error){
@@ -284,11 +282,6 @@ function AppForm(props) {
         <Container fluid className="m-0 px-4 pt-5 d-flex flex-column justify-content-center align-items-center px-md-8 mw-md-1200px">
             <Form onSubmit={formik.handleSubmit} className='m-0 p-0 w-100'>
                 {getFormPage(activeFormPage)}
-
-                    {/* <Container fluid className='m-0 p-0 d-flex justify-content-between my-5'>
-                        <BackButton text="Back" onClick={handleBackBtn}/>
-                        {activeFormPage < 4 ? (<NextButton text="Next" onClick={handleNextBtn}/>) : (<Button className='p-0 m-0 shadow-sm fs-3 fw-semibold px-5 py-2' type='submit'>Finish!</Button>)}
-                    </Container> */}
  
                 {
                     activeFormPage < 4 ? (
@@ -297,7 +290,8 @@ function AppForm(props) {
                             <NextButton text="Next" onClick={handleNextBtn}/>
                         </Container>
                     ) : (
-                        <Container fluid className='m-0 p-0 w-100 d-flex justify-content-end'>
+                        <Container fluid className='m-0 p-0 w-100 d-flex justify-content-between'>
+                            <Button className='p-0 m-0 shadow-sm fs-3 fw-semibold px-5 py-2' onClick={handleBackBtn}>Back</Button>
                             <Button className='p-0 m-0 shadow-sm fs-3 fw-semibold px-5 py-2' type='submit'>Finish!</Button>
                         </Container>
                     )

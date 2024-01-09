@@ -3,6 +3,7 @@ import UserContact from "../models/UserContact.js";
 import sendMail from "./mailer.js";
 import { promises as fs } from "fs";
 import dotenv from 'dotenv';
+import ReviewModel from "../data/reviewSchema.js";
 
 dotenv.config();
 
@@ -13,10 +14,26 @@ export default function processFormData(formData) {
         sendFormDataEmail(formData);
     }
 
-    const userContact = UserContact.build(formData.age, formData.email, formData.phone);
-    // TODO: save userContact to the database
+    // Uncomment to save user contact data to database
+    // const userContact = UserContact.build(formData.age, formData.email, formData.phone);
+    // // TODO: save userContact to the database
+    // console.log("User contact saved...");
 }
 
+export async function processReviewData(reviewData){
+    const newReview = new ReviewModel({
+        DoctorName: reviewData.doctorName,
+        Rating: reviewData.rating,
+        Comment: reviewData.comment
+    });
+
+    try{
+        await newReview.save();
+        console.log("Review saved successfully!")
+    }catch(error){
+        console.log(error)
+    }
+}
 
 export async function sendFormDataEmail(formData) {
     const messageText = generateFormDataTextEmail(formData);

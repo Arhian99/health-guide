@@ -8,6 +8,7 @@
       name="Nunito"
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap"
     />
+
     <mj-attributes>
       <mj-text
         font-family="Nunito, Roboto, sans-serif"
@@ -35,8 +36,9 @@
         color="#0138a3"
         line-height="20px"
         font-weight="bold"
+        font-family="Nunito, Roboto, sans-serif"
       />
-      <mj-class name="body-text" font-size="16px" font-weight="500" />
+      <mj-class name="body-text" font-size="16px" font-weight="500" font-family="Nunito, Roboto, sans-serif"/>
       <mj-class name="social-bg" background-color="#000" />
     </mj-attributes>
   </mj-head>

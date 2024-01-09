@@ -1,12 +1,13 @@
-import React from 'react'
-import { Container, Form, Button } from 'react-bootstrap'
+import React, {useState} from 'react'
+import { Container, Form, Button, Alert } from 'react-bootstrap'
 import * as Yup from 'yup'
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import Rating from '../components/Rating';
-
+import axios from '../api/axios';
 function Review() {
     const navigate = useNavigate();
+    const [errorMsg, setErrorMsg] = useState(null);
 
     const formik = useFormik({
         initialValues: {
@@ -20,8 +21,19 @@ function Review() {
             comment: Yup.string()
         }),
         onSubmit: async (values) => {
-            console.log(values);
-            navigate("/")
+            try {
+                const response = axios.post(
+                    "/api/submitReview",
+                    values
+                );
+
+                navigate("/");
+
+            } catch(error){
+                console.log(error);
+                setErrorMsg(error?.data?.message);
+
+            }
         }
     })
     return (
@@ -67,10 +79,14 @@ function Review() {
                     <Form.Text className='text-danger'>{formik.touched.comment && formik.errors.comment ? formik.errors.comment : null}</Form.Text>
                 </Form.Group>
 
+                <Form.Text className='mb-4'>
+                    {errorMsg !== null ? <Alert variant="danger" >{errorMsg}</Alert> : null}
+                </Form.Text>
+
                 <Button type="submit" className='fw-semibold px-5 py-2 fs-5 shadow-sm'>Submit</Button>
             </Form>
         </Container>
     )
 }
 
-export default Review
+export default Review;

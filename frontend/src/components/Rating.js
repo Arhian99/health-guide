@@ -6,9 +6,7 @@ function Rating(props) {
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
 
-
     return (
-        
         [...Array(5)].map((star, index) => {
             const givenRating = index+1
 
@@ -42,7 +40,6 @@ function Rating(props) {
                 </label>
             )
         })
-        
     )
 }
 
